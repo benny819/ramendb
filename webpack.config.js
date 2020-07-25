@@ -9,15 +9,30 @@ module.exports = {
     path: DIST_DIR
   },
   module : {
-    loaders : [
+    rules : [
       {
         test : /\.jsx?/,
         include : SRC_DIR,
-        loader : 'babel-loader',
-        query: {
-          presets: ['react', 'env']
-       }
+        loader : 'babel-loader'
+      },
+      {
+        test : /\.css$/i,
+        exclude : /node_modules/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true
+            }
+          }
+        ]
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['.js','.jsx']
+  },
+  plugins: [],
+  devServer:{}
 };
