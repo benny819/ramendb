@@ -1,0 +1,21 @@
+.attendee-form {
+  display: flex;
+  width: 70%;
+  margin: 20px;
+  flex-flow: column nowrap;
+}
+
+.attendee-form label{
+  margin-top: 40px;
+}
+
+.attendees {
+  display: flex;
+  width: 30%;
+  margin: 20px;
+  flex-flow: column nowrap;
+}
+
+.review {
+  margin:10px;
+}
